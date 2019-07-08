@@ -1,31 +1,28 @@
 {
-  "name": "react-static-example-basic",
-  "private": true,
   "scripts": {
-    "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
-    "bundle": "react-static bundle",
-    "export": "react-static export",
-    "serve": "serve dist -p 3000 -s"
+    "start": "next",
+    "build": "next build",
+    "now-build": "yarn build"
   },
   "dependencies": {
-    "@reach/router": "^1.2.1",
-    "axios": "^0.18.0",
+    "@zeit/next-css": "^1.0.1",
     "modern-normalize": "^0.5.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-hot-loader": "^4.3.12",
-    "react-location": "^1.0.8",
-    "react-static": "^6.3.5",
-    "react-static-plugin-mdx": "^6.3.1",
-    "react-static-plugin-styled-components": "^6.3.0",
-    "react-syntax-highlighter": "^10.1.2",
-    "styled-components": "^4.1.3"
+    "next": "^9.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-syntax-highlighter": "^11.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "eslint-config-react-tools": "1.x.x",
-    "medium-to-markdown": "^0.0.2",
-    "serve": "10.1.1"
+    "@mdx-js/loader": "^1.0.21",
+    "@next/mdx": "^9.0.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "next-fonts": "^0.17.0",
+    "next-optimized-images": "^2.5.3",
+    "remark-emoji": "^2.0.2",
+    "remark-images": "^1.0.0"
   }
 }

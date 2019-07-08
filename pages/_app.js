@@ -1,12 +1,11 @@
-import React from "react";
-import { Root, Routes } from "react-static";
-import { ThemeProvider } from "styled-components";
-import { MDXProvider } from "@mdx-js/tag";
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { MDXProvider } from '@mdx-js/react'
 //
-import theme from "utils/theme";
-import Header from "components/Header";
-import Footer from "components/Footer";
-import useLocalStorage from "hooks/useLocalStorage";
+import theme from 'utils/theme'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import useLocalStorage from 'hooks/useLocalStorage'
 import {
   GlobalStyles,
   Viewport,
@@ -19,8 +18,8 @@ import {
   Ul,
   Code,
   InlineCode
-} from "components/Styles";
-import "modern-normalize/modern-normalize.css";
+} from 'components/Styles'
+import 'modern-normalize/modern-normalize.css'
 
 const components = {
   h1: Heading,
@@ -33,10 +32,11 @@ const components = {
   ul: Ul,
   code: Code,
   inlineCode: InlineCode
-};
+}
 
-function Theme() {
-  const [isDark, setIsDark] = useLocalStorage("theme", false);
+export default function App({ Component, pageProps }) {
+  const [isDark, setIsDark] = useLocalStorage('theme', false)
+
   return (
     <ThemeProvider theme={isDark ? theme.dark : theme.light}>
       <MDXProvider components={components}>
@@ -45,22 +45,12 @@ function Theme() {
           <Viewport>
             <Header onToggleDark={() => setIsDark(old => !old)} />
             <Content>
-              <Routes />
+              <Component {...pageProps} />
             </Content>
             <Footer />
           </Viewport>
         </React.Fragment>
       </MDXProvider>
     </ThemeProvider>
-  );
+  )
 }
-
-function App() {
-  return (
-    <Root>
-      <Theme />
-    </Root>
-  );
-}
-
-export default App;

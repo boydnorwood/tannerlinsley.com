@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-location";
-import styled from "styled-components";
+import React from 'react'
+import Link from 'next/Link'
+import styled from 'styled-components'
 
 import {
   Section,
@@ -10,15 +10,16 @@ import {
   Heading,
   Small,
   Avatar
-} from "components/Styles";
+} from 'components/Styles'
 
 const Info = styled(Small)`
   font-style: italic;
-`;
+  opacity: 0.5;
+`
 
 const Description = styled(P)`
   margin: 0;
-`;
+`
 
 export default () => (
   <div>
@@ -29,7 +30,7 @@ export default () => (
         </Box>
         <Box
           style={{
-            width: "300px"
+            width: '300px'
           }}
         >
           <P>A blog about Javascript, React, and Front End Programming</P>
@@ -38,7 +39,7 @@ export default () => (
     </Section>
     <Section>
       <Heading>
-        <Link to="blog/react-hooks-the-rebirth-of-state-management">
+        <Link href="blog/react-hooks-the-rebirth-of-state-management">
           React Hooks, the rebirth of State Management and beyond.
         </Link>
       </Heading>
@@ -48,5 +49,17 @@ export default () => (
         would change everything.
       </Description>
     </Section>
+    <Section>
+      <Heading>
+        <Link href="blog/the-similarities-between-open-source-work-and-running-a-tech-startup">
+          The similarities between open source work and running a tech startup.
+        </Link>
+      </Heading>
+      <Info>February 7, 2018</Info>
+      <Description style={{}}>
+        After building and maintaining plenty of open source projects, I have
+        drawn some parallels to running a startup.
+      </Description>
+    </Section>
   </div>
-);
+)
