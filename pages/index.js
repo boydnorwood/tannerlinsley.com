@@ -44,7 +44,7 @@ export default () => (
         </Link>
       </Heading>
       <Info>February 8, 2019</Info>
-      <Description style={{}}>
+      <Description>
         In late 2018 React Hooks were announced, and within minutes, I knew they
         would change everything.
       </Description>
@@ -56,7 +56,7 @@ export default () => (
         </Link>
       </Heading>
       <Info>February 7, 2018</Info>
-      <Description style={{}}>
+      <Description>
         After building and maintaining plenty of open source projects, I have
         drawn some parallels to running a startup.
       </Description>
