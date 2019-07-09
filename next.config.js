@@ -7,20 +7,16 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
 })
 
-module.exports = withCSS(
-  withFonts(
-    withOptimizedImages(
-      withMDX({
-        target: 'serverless',
-        pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-        webpack(config) {
-          config.resolve.modules = [
-            path.resolve('./src'),
-            ...config.resolve.modules
-          ]
-          return config
-        }
-      })
-    )
-  )
+const baseConfig = {
+  target: 'serverless',
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  webpack(config) {
+    config.resolve.modules = [path.resolve('./src'), ...config.resolve.modules]
+    return config
+  }
+}
+
+module.exports = [withCSS, withFonts, withOptimizedImages, withMDX].reduce(
+  (a, b) => b(a),
+  baseConfig
 )

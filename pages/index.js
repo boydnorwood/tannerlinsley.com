@@ -39,6 +39,18 @@ export default () => (
     </Section>
     <Section>
       <Heading>
+        <Link href="blog/from-static-site-generation-to-serverless-prerendering">
+          From Static Site Generation to Serverless Pre-Rendering.
+        </Link>
+      </Heading>
+      <Info>July 9, 2019</Info>
+      <Description>
+        2 years ago I created and have since maintained a progressive static
+        site generator. It's been a wild ride, but it's time to move on...
+      </Description>
+    </Section>
+    <Section>
+      <Heading>
         <Link href="blog/react-hooks-the-rebirth-of-state-management">
           React Hooks, the rebirth of State Management and beyond.
         </Link>
