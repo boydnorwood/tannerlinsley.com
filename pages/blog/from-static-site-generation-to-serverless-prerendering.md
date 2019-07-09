@@ -20,7 +20,7 @@ Writing and maintaining this library has taught me [many reasons why static prog
 
 Over the last few months, I have been investigating serverless functions as a new tool for scalability and dynamic website generation. I was wondering how serverless functions could compliment static content and eventually found the article: [Serverless Prerendering](https://zeit.co/blog/serverless-pre-rendering) (SPR) from Next.js's blog. The concepts involved are really simple to understand and really resonated with me.
 
-The issues that I was trying to solved with scalability and flexibility could theoretically be solved with SPR, so I dug right in. After a lot of experimentation and discussion in the community, I'm convinced for now that Next.js is the platform that comes closest to my ideals.
+The issues that I was trying to solve with scalability and flexibility could theoretically be solved with SPR, so I dug right in. After a lot of experimentation and discussion in the community, I'm convinced for now that Next.js is the platform that comes closest to my ideals.
 
 ## Next.js... Really?
 
@@ -42,7 +42,7 @@ My experience with React Static has been amazing, and even though it's just an o
 
 - Nozzle - My awesome startup that I call home.
 - Every site that [has used React Static](https://github.com/nozzle/react-static/tree/master/#sites-built-with-react-static). You made my day, over and over again.
-- Every [contributor that graciously donated their time to help me](https://github.com/nozzle/react-static/graphs/contributors). You will be blessed for your time, I guaranty it!
+- Every [contributor that graciously donated their time to help me](https://github.com/nozzle/react-static/graphs/contributors). You will be blessed for your time, I guarantee it!
 
 **Thank you all so much!**
 
